@@ -1,5 +1,5 @@
 {
-    "name": "jaylinski/xmltv",
+    "name": "ajvolin/xmltv",
     "description": "A library for generating XMLTV files.",
     "keywords": ["XMLTV"],
     "type": "library",
@@ -8,6 +8,10 @@
         {
             "name": "Jakob Linskeseder",
             "email": "jakob.linskeseder@gmail.com"
+        },
+        {
+            "name": "Adam Volin",
+            "email": "trome.auay@gmail.com"
         }
     ],
     "require": {
