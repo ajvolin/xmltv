@@ -14,6 +14,7 @@ use XmlTv\Tv\Elements\Keyword;
 use XmlTv\Tv\Elements\Language;
 use XmlTv\Tv\Elements\LastChance;
 use XmlTv\Tv\Elements\Length;
+use XmlTv\Tv\Elements\LiveProgramme;
 use XmlTv\Tv\Elements\NewProgramme;
 use XmlTv\Tv\Elements\OrigLanguage;
 use XmlTv\Tv\Elements\Premiere;
@@ -165,6 +166,11 @@ class Programme implements XmlSerializable
      * @var LastChance
      */
     public $lastChance;
+    
+    /**
+     * @var LiveProgramme
+     */
+    public $live;
 
     /**
      * @var NewProgramme
@@ -532,6 +538,7 @@ class Programme implements XmlSerializable
             ->withOptionalChild($this->previouslyShown)
             ->withOptionalChild($this->premiere)
             ->withOptionalChild($this->lastChance)
+            ->withOptionalChild($this->live)
             ->withOptionalChild($this->new)
             ->withChildren($this->getSubtitles())
             ->withChildren($this->getRating())
