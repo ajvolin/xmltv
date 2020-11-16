@@ -15,7 +15,7 @@ class XmlTv
     /**
      * Contains element names that are empty according to the DTD.
      */
-    private const EMPTY_ELEMENTS = ['new'];
+    private const EMPTY_ELEMENTS = ['live', 'new'];
 
     /**
      * Generates an XMLTV file.
