@@ -19,7 +19,7 @@
                      category*, keyword*, language?, orig-language?,
                      length?, icon*, url*, country*, episode-num*,
                      video?, audio?, previously-shown?, premiere?,
-                     last-chance?, new?, subtitles*, rating*,
+                     last-chance?, live?, new?, subtitles*, rating*,
                      star-rating*, review* )>
 <!ATTLIST programme start     CDATA #REQUIRED
                     stop      CDATA #IMPLIED
@@ -102,6 +102,8 @@
 
 <!ELEMENT last-chance (#PCDATA)>
 <!ATTLIST last-chance lang CDATA #IMPLIED>
+
+<!ELEMENT live EMPTY>
 
 <!ELEMENT new EMPTY>
 
