@@ -442,7 +442,7 @@ class Programme implements XmlSerializable
      */
     public function addSeriesId(SeriesId $SeriesId): void
     {
-        array_push($this->SeriesId, $SeriesId);
+        array_push($this->seriesId, $SeriesId);
     }
 
     /**
