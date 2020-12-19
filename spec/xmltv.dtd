@@ -17,7 +17,7 @@
 
 <!ELEMENT programme (title+, sub-title*, desc*, credits?, date?,
                      category*, keyword*, language?, orig-language?,
-                     length?, icon*, url*, country*, episode-num*,
+                     length?, icon*, url*, country*, episode-num*, series-id*,
                      video?, audio?, previously-shown?, premiere?,
                      last-chance?, live?, new?, subtitles*, rating*,
                      star-rating*, review* )>
@@ -83,6 +83,9 @@
 
 <!ELEMENT episode-num (#PCDATA)>
 <!ATTLIST episode-num system CDATA "onscreen">
+
+<!ELEMENT series-id (#PCDATA)>
+<!ATTLIST series-id system CDATA "onscreen">
 
 <!ELEMENT video (present?, colour?, aspect?, quality?)>
 <!ELEMENT present (#PCDATA)>

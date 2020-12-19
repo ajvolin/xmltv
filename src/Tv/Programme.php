@@ -21,6 +21,7 @@ use XmlTv\Tv\Elements\Premiere;
 use XmlTv\Tv\Elements\PreviouslyShown;
 use XmlTv\Tv\Elements\Rating;
 use XmlTv\Tv\Elements\Review;
+use XmlTv\Tv\Elements\SeriesId;
 use XmlTv\Tv\Elements\StarRating;
 use XmlTv\Tv\Elements\SubTitle;
 use XmlTv\Tv\Elements\Subtitles;
@@ -141,6 +142,11 @@ class Programme implements XmlSerializable
      * @var EpisodeNum[]
      */
     private $episodeNum = [];
+
+    /**
+     * @var SeriesId[]
+     */
+    private $seriesId = [];
 
     /**
      * @var Video
@@ -430,6 +436,26 @@ class Programme implements XmlSerializable
     }
 
     /**
+     * Add a series-id.
+     *
+     * @param SeriesId $seriesId
+     */
+    public function addSeriesId(SeriesId $SeriesId): void
+    {
+        array_push($this->SeriesId, $SeriesId);
+    }
+
+    /**
+     * Get all series-ids.
+     *
+     * @return SeriesId[]
+     */
+    public function getSeriesId(): array
+    {
+        return $this->seriesId;
+    }
+    
+    /**
      * Add subtitles.
      *
      * @param Subtitles $subtitles
@@ -533,6 +559,7 @@ class Programme implements XmlSerializable
             ->withChildren($this->getUrl())
             ->withChildren($this->getCountry())
             ->withChildren($this->getEpisodeNum())
+            ->withChildren($this->getSeriesId())
             ->withOptionalChild($this->video)
             ->withOptionalChild($this->audio)
             ->withOptionalChild($this->previouslyShown)
